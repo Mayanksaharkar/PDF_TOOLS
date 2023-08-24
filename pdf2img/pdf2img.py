@@ -103,7 +103,7 @@ canvas = Canvas(
 
 canvas.place(x=0, y=0)
 image_image_1 = PhotoImage(
-    file=r'C:\Users\mayan\PycharmProjects\PDF_TOOLS\pdf2img\image_1.png')
+    file=r'pdf2img\image_1.png')
 image_1 = canvas.create_image(
     386.0,
     229.0,
@@ -120,7 +120,7 @@ canvas.create_text(
 )
 
 button_image_1 = PhotoImage(
-    file=r'C:\Users\mayan\PycharmProjects\PDF_TOOLS\pdf2img\button_1.png')
+    file=r'pdf2img\button_1.png')
 button_1 = Button(
     image=button_image_1,
     borderwidth=0,
@@ -136,7 +136,7 @@ button_1.place(
 )
 button_1.config(cursor="hand2")
 button_image_2 = PhotoImage(
-    file=r'C:\Users\mayan\PycharmProjects\PDF_TOOLS\pdf2img\button_2.png')
+    file=r'pdf2img\button_2.png')
 button_2 = Button(
     image=button_image_2,
     borderwidth=0,
@@ -152,7 +152,7 @@ button_2.place(
 )
 button_2.config(cursor="hand2")
 button_image_3 = PhotoImage(
-    file=r'C:\Users\mayan\PycharmProjects\PDF_TOOLS\pdf2img\button_3.png')
+    file=r'pdf2img\button_3.png')
 button_3 = Button(
     image=button_image_3,
     borderwidth=0,
