@@ -8,14 +8,10 @@ from tkinter.ttk import Progressbar
 from pdf2image import convert_from_path
 import time
 from tkinter import messagebox
-OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\mayan\Desktop\py\guis\build\assets\frame0")
+
 global file_path
-file_path=""
+file_path = ""
 
-
-def relative_to_assets(path: str) -> Path:
-    return ASSETS_PATH / Path(path)
 
 def center_window():
     # Get the screen dimensions
@@ -28,6 +24,7 @@ def center_window():
 
     # Move the window to the center of the screen
     window.geometry("+{}+{}".format(x, y))
+
 
 def button1_clicked():
     # Open file dialog to select a PDF file
@@ -42,6 +39,7 @@ def button1_clicked():
                        text="File Name : " + file_path,
                        fill="#000000",
                        font=("Tienne Regular", 12 * -1))
+
 
 def button2_clicked():
     if file_path:
@@ -76,36 +74,36 @@ def button2_clicked():
         progress_window.destroy()
         messagebox.showinfo("Conversion Complete", "PDF converted and images saved successfully!")
         window.title("PDF TO IMAGE CONVERTER ")
-        button_3.config(state="normal" , cursor="watch")
+        button_3.config(state="normal", cursor="watch")
     else:
         window.title("PDF TO IMAGE CONVERTER ")
-        messagebox.showinfo("","Please select a PDF file first.")
+        messagebox.showinfo("", "Please select a PDF file first.")
+
 
 def button3_clicked():
-   import os
-   os.startfile(output_folder)
-   window.destroy()
+    import os
+    os.startfile(output_folder)
+    window.destroy()
 
 
 window = Tk()
 window.title("PDF TO IMAGE CONVERTER ")
 window.geometry("773x458")
-window.configure(bg = "#FFFFFF")
-
+window.configure(bg="#FFFFFF")
 
 canvas = Canvas(
     window,
-    bg = "#FFFFFF",
-    height = 458,
-    width = 773,
-    bd = 0,
-    highlightthickness = 0,
-    relief = "ridge"
+    bg="#FFFFFF",
+    height=458,
+    width=773,
+    bd=0,
+    highlightthickness=0,
+    relief="ridge"
 )
 
-canvas.place(x = 0, y = 0)
+canvas.place(x=0, y=0)
 image_image_1 = PhotoImage(
-    file=r'pdf2img\image_1.png')
+    file=r'C:\Users\mayan\PycharmProjects\PDF_TOOLS\pdf2img\image_1.png')
 image_1 = canvas.create_image(
     386.0,
     229.0,
@@ -122,7 +120,7 @@ canvas.create_text(
 )
 
 button_image_1 = PhotoImage(
-    file=r'pdf2img\button_1.png')
+    file=r'C:\Users\mayan\PycharmProjects\PDF_TOOLS\pdf2img\button_1.png')
 button_1 = Button(
     image=button_image_1,
     borderwidth=0,
@@ -138,7 +136,7 @@ button_1.place(
 )
 button_1.config(cursor="hand2")
 button_image_2 = PhotoImage(
-    file=r'pdf2img\button_2.png')
+    file=r'C:\Users\mayan\PycharmProjects\PDF_TOOLS\pdf2img\button_2.png')
 button_2 = Button(
     image=button_image_2,
     borderwidth=0,
@@ -154,7 +152,7 @@ button_2.place(
 )
 button_2.config(cursor="hand2")
 button_image_3 = PhotoImage(
-    file=r'pdf2img\button_3.png')
+    file=r'C:\Users\mayan\PycharmProjects\PDF_TOOLS\pdf2img\button_3.png')
 button_3 = Button(
     image=button_image_3,
     borderwidth=0,
@@ -168,7 +166,7 @@ button_3.place(
     width=229.0,
     height=48.0
 )
-button_3.config(cursor="watch" , state="disabled")
+button_3.config(cursor="watch", state="disabled")
 window.grab_set()
 window.attributes('-topmost', True)
 window.focus_force()

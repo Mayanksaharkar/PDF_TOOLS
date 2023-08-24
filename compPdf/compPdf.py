@@ -100,7 +100,7 @@ image_1 = canvas.create_image(
     386.0,
     229.0,
     image=image_image_1
-)
+)   
 
 canvas.create_text(
     284.0,
